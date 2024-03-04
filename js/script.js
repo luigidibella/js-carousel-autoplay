@@ -39,3 +39,12 @@ down.addEventListener('click', function(){
   itemsCollection[counterImg].classList.remove('hidden');
   console.log(counterImg);
 })
+
+function autoplay(){
+  itemsCollection[counterImg++].classList.add('hidden');
+  counterImg = (counterImg + 1) % itemsCollection.length;
+  itemsCollection[counterImg].classList.remove('hidden');
+  console.log(counterImg);
+}
+
+setInterval(autoplay, 3000)
